@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Arcane Archer</name>
-		<update version="0.1.0">
+		<update version="0.1.1">
 			<file name="fighter-arcanearcher.xml" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/supplements/xanathars-guide-to-everything/archetypes/fighter-arcanearcher.xml" />
 		</update>
 	</info>
@@ -36,12 +36,11 @@
 		<description>
 			<p>At 3rd level, you learn magical theory or some of the secrets of nature—typical for practitioners of this elven martial tradition. You choose to gain proficiency in either the Arcana or the Nature skill, and you choose to learn either the prestidigitation or the druidcraft cantrip.</p>
 		</description>
-		<sheet display="false">
-			<description>You learn magical theory or some of the secrets of nature—typical for practitioners of this elven martial tradition.</description>
-		</sheet>
+		<sheet display="false" />
 		<rules>
 			<select type="Proficiency" name="Arcane Archer Lore" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_NATURE"/>
-			<select type="Spell" name="Arcane Archer Lore" supports="ID_PHB_SPELL_PRESTIDIGITATION|ID_PHB_SPELL_DRUIDCRAFT" />
+			<select type="Spell" name="Arcane Archer Lore" supports="ID_PHB_SPELL_PRESTIDIGITATION|ID_PHB_SPELL_DRUIDCRAFT" requirements="ID_WOTC_PHB_CLASS_FEATURE_MARTIALARCHETYPE" />
+			<select type="Spell" name="Cantrip (Arcane Archer Lore)" supports="ID_WOTC_PHB24_SPELL_PRESTIDIGITATION|ID_WOTC_PHB24_SPELL_DRUIDCRAFT" requirements="ID_WOTC_PHB24_CLASS_FEATURE_FIGHTER_FIGHTER_SUBCLASS" />
 		</rules>
 	</element>
 
@@ -138,8 +137,8 @@
 			<p class="indent">The necrotic damage increases to 4d6 when you reach 18th level in this class.</p>
 		</description>
 		<sheet>
-			<description level="3">A creature hit by this arrow takes an extra 2d6 necrotic damage, and must make a DC{{arcane shot:dc}} Constitution saving throw, or its weapon damage is halved until the start of its next turn.</description>
-			<description level="18">A creature hit by this arrow takes an extra 4d6 necrotic damage, and must make a DC{{arcane shot:dc}} Constitution saving throw, or its weapon damage is halved until the start of its next turn.</description>
+			<description level="3">A creature hit by this arrow takes an extra 2d6 necrotic damage, and must make a DC{{arcane shot:dc}} Constitution saving throw, or its weapon damage is halved until the start of your next turn.</description>
+			<description level="18">A creature hit by this arrow takes an extra 4d6 necrotic damage, and must make a DC{{arcane shot:dc}} Constitution saving throw, or its weapon damage is halved until the start of your next turn.</description>
 		</sheet>
 	</element>
 

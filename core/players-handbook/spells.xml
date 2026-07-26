@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Spells</name>
-		<update version="0.5.4">
+		<update version="0.5.6">
 			<file name="spells.xml" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/core/players-handbook/spells.xml" />
 		</update>
 	</info>
@@ -1878,7 +1878,7 @@
 		</setters>
 	</element>
 	<element name="Creation" type="Spell" source="Player’s Handbook" id="ID_PHB_SPELL_CREATION">
-		<supports>Sorcerer, Artificer</supports>
+		<supports>Sorcerer, Artificer, Wizard</supports>
 		<description>
 			<p>You pull wisps of shadow material from the Shadowfell to create a nonliving object of vegetable matter within range: soft goods, rope, wood, or something similar. You can also use this spell to create mineral objects such as stone, crystal, or metal. The object created must be no larger than a 5-foot cube, and the object must be of a form and material that you have seen before.</p>
 			<p class="indent">The duration depends on the object's material. If the object is composed of multiple materials, use the shortest duration.</p>
@@ -3021,6 +3021,9 @@
 			<set name="isConcentration">false</set>
 			<set name="isRitual">true</set>
 		</setters>
+		<rules>
+			<select type="Companion" name="Find Familiar" supports="Familiar" requirements="!(ID_WOTC_PHB_CLASS_FEATURE_WARLOCK_PACT_BOON_PACT_OF_THE_CHAIN||ID_WOTC_PHB24_CLASS_FEATURE_ELDRITCH_INVOCATION_PACT_OF_THE_CHAIN)" />
+		</rules>
 	</element>
 	<element name="Find Steed" type="Spell" source="Player’s Handbook" id="ID_PHB_SPELL_FIND_STEED">
 		<supports>Paladin</supports>
@@ -6056,7 +6059,7 @@
 	<element name="Protection from Poison" type="Spell" source="Player’s Handbook" id="ID_PHB_SPELL_PROTECTION_FROM_POISON">
 		<supports>Cleric, Druid, Paladin, Ranger, Artificer</supports>
 		<description>
-			<p>You touch a creature. If it is poisoned, you neutralize the poison. If more than one poison afflicts the target, you neutralize on poison that you know is present, or you neutralize one at random.</p>
+			<p>You touch a creature. If it is poisoned, you neutralize the poison. If more than one poison afflicts the target, you neutralize one poison that you know is present, or you neutralize one at random.</p>
 			<p class="indent">For the duration, the target has advantage on saving throws against being poisoned, and it has resistance to poison damage.</p>
 		</description>
 		<setters>

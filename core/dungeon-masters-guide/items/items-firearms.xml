@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Firearms</name>
-		<update version="0.0.4">
+		<update version="0.0.5">
 			<file name="items-firearms.xml" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/core/dungeon-masters-guide/items/items-firearms.xml" />
 		</update>
 	</info>
@@ -31,8 +31,8 @@
 	</element>
 	<element name="Gunpowder, Keg" type="Item" source="Dungeon Master’s Guide" id="ID_WOTC_DMG_ITEM_GUNPOWDER_KEG">
 		<description>
-			<p>Gunpowder is chiefly used to propel a bu 11et out of the barrel of a pistol or rifle, or it is formed into a bomb. Gunpowder is sold in small wooden kegs and in waterresistant powder horns.</p>
-			<p class="indent">Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it (3d6 for a powder horn, 7d6 for a keg). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, s hedding br ight light in a 30-foot radius and dim light for an add itional 30 feet.</p>
+			<p>Gunpowder is chiefly used to propel a bullet out of the barrel of a pistol or rifle, or it is formed into a bomb. Gunpowder is sold in small wooden kegs and in water-resistant powder horns.</p>
+			<p class="indent">Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it (3d6 for a powder horn, 7d6 for a keg). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet.</p>
 		</description>
 		<setters>
 			<set name="category">Explosives</set>
@@ -43,8 +43,8 @@
 	</element>
 	<element name="Gunpowder, Powder Horn" type="Item" source="Dungeon Master’s Guide" id="ID_WOTC_DMG_ITEM_GUNPOWDER_POWDER_HORN">
 		<description>
-			<p>Gunpowder is chiefly used to propel a bu 11et out of the barrel of a pistol or rifle, or it is formed into a bomb. Gunpowder is sold in small wooden kegs and in waterresistant powder horns.</p>
-			<p class="indent">Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it (3d6 for a powder horn, 7d6 for a keg). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, s hedding br ight light in a 30-foot radius and dim light for an add itional 30 feet.</p>
+			<p>Gunpowder is chiefly used to propel a bullet out of the barrel of a pistol or rifle, or it is formed into a bomb. Gunpowder is sold in small wooden kegs and in water-resistant powder horns.</p>
+			<p class="indent">Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it (3d6 for a powder horn, 7d6 for a keg). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet.</p>
 		</description>
 		<setters>
 			<set name="category">Explosives</set>
@@ -317,11 +317,13 @@
 	<!-- todo: create renaissance/modern/futuristic proficiencies -->
 
 	<element name="Weapon Proficiency (Pistol)" type="Proficiency" source="Dungeon Master’s Guide" id="ID_WOTC_DMG_PROFICIENCY_WEAPON_RENAISSANCE_FIREARMS_PISTOL">
+		<requirements>!ID_WOTC_PHB24_PROFICIENCY_WEAPON_PROFICIENCY_PISTOL</requirements>
 		<supports>Weapon, Martial, Ranged, Firearm, ID_INTERNAL_WEAPON_CATEGORY_FIREARM, ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_WOTC_DMG_WEAPON_PROPERTY_FIREARM_AMMUNITION, ID_INTERNAL_WEAPON_PROPERTY_LOADING</supports>
 		<requirements>ID_WOTC_DMG_OPTION_FIREARMS</requirements>
 		<sheet alt="Pistol" />
 	</element>
 	<element name="Weapon Proficiency (Musket)" type="Proficiency" source="Dungeon Master’s Guide" id="ID_WOTC_DMG_PROFICIENCY_WEAPON_RENAISSANCE_FIREARMS_MUSKET">
+		<requirements>!ID_WOTC_PHB24_PROFICIENCY_WEAPON_PROFICIENCY_MUSKET</requirements>
 		<supports>Weapon, Martial, Ranged, Firearm, ID_INTERNAL_WEAPON_CATEGORY_FIREARM, ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_WOTC_DMG_WEAPON_PROPERTY_FIREARM_AMMUNITION, ID_INTERNAL_WEAPON_PROPERTY_LOADING, ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED</supports>
 		<requirements>ID_WOTC_DMG_OPTION_FIREARMS</requirements>
 		<sheet alt="Musket" />
